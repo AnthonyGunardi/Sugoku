@@ -24,7 +24,9 @@ export default function TitleScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.container}>
-        <Text style={{ color: 'white', fontSize: 25 }}>SUGOKU</Text>
+        <View style={styles.gametitle}>
+          <Text style={{ color: 'white', fontSize: 75, fontWeight: 'bold' }}>SUGOKU</Text>
+        </View>
         <Text></Text>
         <Text style={{ color: 'white' }}>Enter Your Username Here</Text>
         <Text></Text>
@@ -49,14 +51,14 @@ export default function TitleScreen({ navigation }) {
             </Text>
           </View>
         </View>
-        <View>
+        <View style={styles.buttonContainer}>
           <Text></Text>
           <Button
             onPress={() => {
               navigationHandler()
             }}
             title="Enter"
-            color="#203333"
+            color="#07DA63"
           />
         </View>
       </View>
@@ -71,6 +73,12 @@ const styles = StyleSheet.create({
     color: '#fff',
     alignItems: 'center',
     justifyContent: 'center'
+  },
+  gametitle: {
+    color: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 300,
   },
   nameSetting: {
     color: '#fff',
@@ -87,6 +95,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#203333',
     justifyContent: 'space-evenly',
     height: 50,
+    width: 250
+  },
+  buttonContainer: {
     width: 200
   }
 });
