@@ -67,7 +67,7 @@ export default function TitleScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000',
+    backgroundColor: '#203354',
     color: '#fff',
     alignItems: 'center',
     justifyContent: 'center'

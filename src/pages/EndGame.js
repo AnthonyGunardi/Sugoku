@@ -21,7 +21,7 @@ export default function EndGame({ route }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000',
+    backgroundColor: '#203354',
     alignItems: 'center',
     justifyContent: 'center',
     color: '#fff'

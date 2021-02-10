@@ -110,7 +110,7 @@ export default function Board(props) {
 
 
   return (
-    <View>
+    <View style={styles.container}>
         {
           (loading) ?
             <View>
@@ -135,7 +135,7 @@ export default function Board(props) {
                 <View style={{ justifyContent: 'space-evenly' }}>
                   <Text style={{ textAlign: 'center', fontSize: 40, color: '#ffffff' }}>{playerName}</Text>
                   <Text></Text>
-                  <Text style={{ textAlign: 'center', fontSize: 20, color: '#ffffff' }}>{difficulty} difficulty</Text>
+                  <Text style={{ textAlign: 'center', fontSize: 20, color: '#ffffff' }}>Difficulty: {difficulty}</Text>
                   <Text></Text>
                   <View style={styles.standaloneRow}>
                     <Button
@@ -159,6 +159,10 @@ export default function Board(props) {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#203354'
+  },
   boardSetting: {
     flex: 1,
     flexDirection: 'row',
