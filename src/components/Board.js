@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
+import axios from 'axios';
 
 export default function Board(props) {
   const [board, setBoard] = useState([])
@@ -75,7 +75,7 @@ export default function Board(props) {
       })
   }
 
-  const handleOnChangeText = (input, i, j) => {
+  const changeTextHandler = (input, i, j) => {
     screen[i][j] = Number(input)
     setScreen(screen)
   }
@@ -93,7 +93,7 @@ export default function Board(props) {
             style={styles.numSetting}
             keyboardType="number-pad"
             maxLength={1}
-            onChangeText={input => handleOnChangeText(input, i, j)}>
+            onChangeText={input => changeTextHandler(input, i, j)}>
           </TextInput>
         )
       }
@@ -141,15 +141,15 @@ export default function Board(props) {
                     <Button
                       onPress={() => { startHandler() }}
                       title="Start"
-                      color="#888888" />
+                      color="#0000FF" />
                     <Button
                       onPress={() => { validateAnswer(screen) }}
                       title="Submit"
-                      color="#333333" />
+                      color="#008000" />
                     <Button
                       onPress={() => { setScreen(solution) }}
                       title="Solution"
-                      color="#222222" />
+                      color="#FF0000" />
                   </View>
                 </View>
             </View>
@@ -161,7 +161,7 @@ export default function Board(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#203354'
+    backgroundColor: '#1E73D5'
   },
   boardSetting: {
     flex: 1,
@@ -179,14 +179,17 @@ const styles = StyleSheet.create({
     height: 40
   },
   loadingSetting: {
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     color: '#fff',
-    fontSize: 15
+    fontSize: 40,
+    marginTop: 300
   },
   standaloneRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-evenly'
+    justifyContent: 'space-evenly',
+    height: 80
   }
 });

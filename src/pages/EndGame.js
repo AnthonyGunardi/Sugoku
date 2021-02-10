@@ -9,9 +9,9 @@ export default function EndGame({ route }) {
           <View>
             {
               (isWin === 'unsolved') ?
-                <Text style={{ color: 'white', fontSize: 30 }}>YOU LOOSE</Text>
+                <Text style={{ color: 'white', fontSize: 45 }}>YOU LOOSE</Text>
                  :
-                <Text style={{ color: 'white', fontSize: 30 }}>YOU WIN!</Text>
+                <Text style={{ color: 'white', fontSize: 45 }}>YOU WIN!</Text>
             }
           </View>
         </View>
@@ -21,7 +21,7 @@ export default function EndGame({ route }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#203354',
+    backgroundColor: '#1E73D5',
     alignItems: 'center',
     justifyContent: 'center',
     color: '#fff'

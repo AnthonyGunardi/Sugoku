@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Button, TextInput, Alert } from 'react-native';
+import { StyleSheet, ImageBackground, Text, View, Button, TextInput, Alert } from 'react-native';
 
 export default function TitleScreen({ navigation }) {
   const [name, setName] = useState('')
   const [diff, setDiff] = useState('')
+  const image = require('../../assets/splash.png')
 
   const pressHandler = (param) => {
     setDiff(param)
-    Alert.alert(`You choose ${param.toUpperCase()} difficulty`, `Press ENTER To Continue`)
+    Alert.alert(`${param.toUpperCase()} Difficulty is Choosen`, `Press ENTER To Continue`)
   }
 
   const navigationHandler = () => {
@@ -23,6 +24,7 @@ export default function TitleScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
+      <ImageBackground source={image} style={styles.image}>
       <View style={styles.container}>
         <View style={styles.gametitle}>
           <Text style={{ color: 'white', fontSize: 75, fontWeight: 'bold' }}>SUGOKU</Text>
@@ -62,6 +64,7 @@ export default function TitleScreen({ navigation }) {
           />
         </View>
       </View>
+      </ImageBackground>
     </View>
     );
 }
@@ -69,10 +72,16 @@ export default function TitleScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#203354',
+    // backgroundColor: '#1E73D5',
     color: '#fff',
     alignItems: 'center',
     justifyContent: 'center'
+  },
+  image: {
+    flex: 1,
+    width: '100%',
+    resizeMode: "cover",
+    justifyContent: "center"
   },
   gametitle: {
     color: '#fff',
