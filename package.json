@@ -7,6 +7,16 @@
     "web": "expo start --web",
     "eject": "expo eject"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnthonyGunardi/Sugoku.git"
+  },
+  "keywords": [],
+  "author": "Anthony Gunardi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnthonyGunardi/Sugoku/issues"
+  },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/native": "^5.9.2",

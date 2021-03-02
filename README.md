@@ -1,4 +1,5 @@
 # Sugoku
+A sudoku mobile game based from [sugoku API](https://github.com/bertoort/sugoku), created using react native & expo
 
 ## URL
 
@@ -6,4 +7,4 @@
 https://expo.io/@anthonygunardi/sugoku
 
 ### Released Build:
-https://github.com/AnthonyGunardi/sugoku/releases
+https://github.com/AnthonyGunardi/Sugoku/releases
